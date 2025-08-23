@@ -1,0 +1,13 @@
+`timescale 1ps/1ps   
+module top_module ( );
+    logic clk;
+    dut u1(.clk(clk));
+    initial
+        begin
+            $monitor("clk=%0b",clk);
+            clk=0;
+            forever #5 clk=~clk;
+        end
+    
+
+endmodule
